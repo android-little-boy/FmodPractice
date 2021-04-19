@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.fmod.FMOD;
 
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         FMOD.close();
+    }
+
+    public void showComplete(String msg){
+        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
     }
 
 
