@@ -3,6 +3,7 @@
 /* Header for class com_androidlittleboy_fmodpractice_MainActivity */
 #include <fmod.hpp>
 #include <string>
+#include <android/log.h>
 #ifndef _Included_com_androidlittleboy_fmodpractice_MainActivity
 #define _Included_com_androidlittleboy_fmodpractice_MainActivity
 #ifdef __cplusplus
@@ -20,6 +21,8 @@ extern "C" {
 #define com_androidlittleboy_fmodpractice_MainActivity_MODE_GAOGUAI 4
 #undef com_androidlittleboy_fmodpractice_MainActivity_MODE_KONGLING
 #define com_androidlittleboy_fmodpractice_MainActivity_MODE_KONGLING 5
+#define TAG "NDK-jni"
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG,TAG,__VA_ARGS__);
 /*
  * Class:     com_androidlittleboy_fmodpractice_MainActivity
  * Method:    voiceChangeNative

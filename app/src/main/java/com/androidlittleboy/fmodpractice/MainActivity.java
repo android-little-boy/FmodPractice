@@ -43,7 +43,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showComplete(String msg){
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(MainActivity.this,msg,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
